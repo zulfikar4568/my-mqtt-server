@@ -14,7 +14,11 @@ services:
     container_name: eclipse-mosquitto
     restart: always
     volumes:
-      - ./data:/mosquitto/data
-      - ./log:/mosquitto/log
+      - data:/mosquitto/data
+      - log:/mosquitto/log
     ports:
       - 1883:1883
+
+volumes:
+  data:
+  log:
